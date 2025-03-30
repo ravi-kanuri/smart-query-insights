@@ -10,10 +10,10 @@ const Index = () => {
   return (
     <Provider store={store}>
       <div className="min-h-screen bg-background">
-        <div className="container py-8">
+        <div className="container py-4">
           <Header />
           
-          <div className="mb-8 mt-6">
+          <div className="mb-4 mt-2">
             <QueryInput />
           </div>
           
