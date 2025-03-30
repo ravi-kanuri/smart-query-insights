@@ -13,11 +13,11 @@ const Index = () => {
         <div className="container py-8">
           <Header />
           
-          <div className="mb-8">
+          <div className="mb-8 mt-6">
             <QueryInput />
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-1">
               <QueryHistory />
             </div>
