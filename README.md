@@ -1,69 +1,56 @@
-# Welcome to your Lovable project
+# GenAI Insights  - Data Query Dashboard Prototype
 
-## Project info
+A React-based dashboard prototype for a Gen AI Analytics tool that enables non-technical teams to query databases using natural language and visualize results instantly.
 
-**URL**: https://lovable.dev/projects/68fa2b5a-82a1-49fc-b1fb-6309f67d0a2e
+## Live Demo
 
-## How can I edit this code?
+[View Live Demo](https://smart-query-insights.onrender.com/)
 
-There are several ways of editing your application.
 
-**Use Lovable**
+## Technical Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/68fa2b5a-82a1-49fc-b1fb-6309f67d0a2e) and start prompting.
+- **Frontend Framework**: React
+- **State Management**: Redux
+- **Styling**: Tailwind CSS
+- **Data Visualization**: Recharts
+- **Deployment**: Render
 
-Changes made via Lovable will be committed automatically to this repo.
 
-**Use your preferred IDE**
+## Installation and Setup
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. Clone the repository:
+   ```
+   https://github.com/ravi-kanuri/smart-query-insights.git
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. Install dependencies:
+   ```
+   cd smart-query-insights
+   npm install
+   ```
 
-Follow these steps:
+3. Start the development server:
+   ```
+   npm run dev
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4. Open your browser and navigate to `http://localhost:8080`
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Usage Guide
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. **Enter a Query**: Type your business question in the query input field
+2. **Use Suggestions**: AI-powered suggestions that appear
+3. **Submit Query**: Press Enter or click the Submit button to process your query
+4. **View Results**: Explore the visualized data in the results section
+5. **Review History**: Click on any previous query in the history section to rerun it
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Implementation Details
 
-**Edit a file directly in GitHub**
+- **Query Processing Simulation**: Mimics AI processing with realistic timing
+- **Mock Data Generation**: Creates relevant data based on query content
+- **Responsive Layout**: Adapts to different screen sizes
+- **Error Handling**: Gracefully manages incorrect queries and system errors
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Developer Notes
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/68fa2b5a-82a1-49fc-b1fb-6309f67d0a2e) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+This prototype demonstrates the UI/UX and state management aspects of the Gen AI Analytics tool. In a production environment, it would connect to backend services for actual query processing and data retrieval.
