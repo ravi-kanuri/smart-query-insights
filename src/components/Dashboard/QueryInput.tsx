@@ -81,7 +81,7 @@ const QueryInput = () => {
       {/* AI Suggestions */}
       {showSuggestions && (
         <div className="mt-2 p-3 bg-white border rounded-lg shadow-lg shadow-purple-300">
-          <p className="text-lg font-medium text-muted-foreground mb-2 flex items-center">
+          <p className="text-sm font-medium text-muted-foreground mb-2 flex items-center">
             <Sparkles className="h-4 w-4 mr-2 text-analytics-purple" />
             Suggested queries
           </p>
@@ -90,7 +90,7 @@ const QueryInput = () => {
               <button
                 key={index}
                 onClick={() => handleSuggestionClick(suggestion)}
-                className="text-left p-2 text-md hover:bg-blue-200 rounded-md transition-colors"
+                className="text-left p-2 text-sm hover:bg-blue-200 rounded-md transition-colors"
               >
                 {suggestion}
               </button>
