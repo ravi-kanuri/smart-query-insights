@@ -1,17 +1,10 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Sparkles, Send, Loader2 } from "lucide-react";
-import { 
-  useAppDispatch, 
-  useAppSelector 
-} from "@/hooks/useRedux";
-import { 
-  setCurrentQuery, 
-  processQuery 
-} from "@/store/querySlice";
+import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
+import { setCurrentQuery, processQuery } from "@/store/querySlice";
 
 const QueryInput = () => {
   const dispatch = useAppDispatch();
@@ -44,7 +37,7 @@ const QueryInput = () => {
   };
 
   useEffect(() => {
-    // Show suggestions when input is focused and query is empty
+    
     if (currentQuery === '') {
       setShowSuggestions(true);
     } else {
@@ -55,7 +48,7 @@ const QueryInput = () => {
   return (
     <div className="w-full">
       <form onSubmit={handleSubmit} className="relative">
-        <div className="flex w-full items-center space-x-2">
+        <div className="flex w-full items-center space-x-2 ">
           <div className="relative flex-1">
             <div className="absolute left-3 top-1/2 -translate-y-1/2">
               <Sparkles className="h-5 w-5 text-analytics-purple opacity-70" />
@@ -64,13 +57,13 @@ const QueryInput = () => {
               placeholder="Ask a question about your data..."
               value={currentQuery}
               onChange={(e) => dispatch(setCurrentQuery(e.target.value))}
-              className="pl-10 pr-4 py-6 text-base rounded-lg border-2 border-muted focus:border-analytics-lightPurple focus-visible:ring-analytics-purple"
+              className="pl-10 bg-white pr-4 py-6 text-lg rounded-lg border-2 border-muted focus:border-analytics-lightPurple focus-visible:ring-analytics-purple shadow-purple-300 shadow-md"
               disabled={isLoading}
             />
           </div>
           <Button 
             type="submit" 
-            className="bg-analytics-blue hover:bg-analytics-purple transition-colors py-6"
+            className="bg-analytics-blue hover:bg-blue-500 transition-colors py-6"
             disabled={isLoading}
           >
             {isLoading ? (
@@ -87,8 +80,8 @@ const QueryInput = () => {
 
       {/* AI Suggestions */}
       {showSuggestions && (
-        <div className="mt-2 p-3 bg-white border rounded-lg shadow-sm">
-          <p className="text-sm font-medium text-muted-foreground mb-2 flex items-center">
+        <div className="mt-2 p-3 bg-white border rounded-lg shadow-lg shadow-purple-300">
+          <p className="text-lg font-medium text-muted-foreground mb-2 flex items-center">
             <Sparkles className="h-4 w-4 mr-2 text-analytics-purple" />
             Suggested queries
           </p>
@@ -97,7 +90,7 @@ const QueryInput = () => {
               <button
                 key={index}
                 onClick={() => handleSuggestionClick(suggestion)}
-                className="text-left p-2 text-sm hover:bg-muted rounded-md transition-colors"
+                className="text-left p-2 text-md hover:bg-blue-200 rounded-md transition-colors"
               >
                 {suggestion}
               </button>

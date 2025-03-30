@@ -1,28 +1,5 @@
-
-import { 
-  Card, 
-  CardContent, 
-  CardHeader, 
-  CardTitle,
-  CardDescription
-} from "@/components/ui/card";
-import { 
-  BarChart, 
-  Bar, 
-  LineChart, 
-  Line, 
-  PieChart, 
-  Pie, 
-  AreaChart, 
-  Area,
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  Legend, 
-  ResponsiveContainer,
-  Cell
-} from "recharts";
+import { Card, CardContent, CardHeader, CardTitle,CardDescription} from "@/components/ui/card";
+import { BarChart, Bar, LineChart, Line, PieChart, Pie, AreaChart, Area,XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,Cell} from "recharts";
 import { CircleCheck, Loader2 } from "lucide-react";
 import { useAppSelector } from "@/hooks/useRedux";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -30,10 +7,11 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 // Define chart colors
 const COLORS = ['#4361ee', '#7209b7', '#4cc9f0', '#3a0ca3', '#9b87f5'];
 
+
 const NoResults = () => (
-  <div className="flex flex-col items-center justify-center h-[350px] text-center">
-    <div className="w-16 h-16 mb-4 rounded-full bg-muted flex items-center justify-center">
-      <CircleCheck className="h-8 w-8 text-muted-foreground" />
+  <div className="flex flex-col items-center justify-center h-[350px] text-center bg-white rounded-md shadow-purple-300 shadow-xl">
+    <div className="w-14 h-14 mb-4 rounded-full bg-purple-500 flex items-center justify-center">
+      <CircleCheck className="h-8 w-8 text-white" />
     </div>
     <h3 className="text-lg font-medium mb-1">No query results yet</h3>
     <p className="text-muted-foreground max-w-md">
@@ -43,7 +21,7 @@ const NoResults = () => (
 );
 
 const LoadingState = () => (
-  <div className="flex flex-col items-center justify-center h-[350px] text-center">
+  <div className="flex flex-col items-center justify-center h-[350px] text-center shadow-purple-300 shadow-xl">
     <div className="w-16 h-16 mb-4 rounded-full bg-analytics-lightPurple/10 flex items-center justify-center animate-pulse">
       <Loader2 className="h-8 w-8 text-analytics-purple animate-spin" />
     </div>
@@ -182,7 +160,7 @@ const ResultsDisplay = () => {
   const latestResult = results[0];
   
   return (
-    <Card className="w-full">
+    <Card className="w-full shadow-purple-300 shadow-xl">
       <CardHeader>
         <CardTitle>Results</CardTitle>
         <CardDescription>

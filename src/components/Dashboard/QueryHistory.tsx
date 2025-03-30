@@ -1,10 +1,4 @@
-
-import { 
-  Card, 
-  CardContent, 
-  CardHeader, 
-  CardTitle 
-} from "@/components/ui/card";
+import {  Card,  CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { Clock, Sparkles } from "lucide-react";
@@ -21,9 +15,9 @@ const QueryHistory = () => {
   };
 
   return (
-    <Card className="h-[400px]">
+    <Card className="h-[400px] shadow-purple-300 shadow-xl">
       <CardHeader>
-        <CardTitle className="text-lg flex items-center">
+        <CardTitle className="text-xl flex items-center">
           <Clock className="h-5 w-5 mr-2 text-analytics-purple" />
           Recent Queries
         </CardTitle>
@@ -53,13 +47,13 @@ const QueryHistory = () => {
                     <Button 
                       variant="ghost" 
                       size="sm" 
-                      className="h-7 px-2 opacity-70 hover:opacity-100 group-hover:bg-analytics-lightPurple/10"
+                      className="h-7 px-2 opacity-70 hover:opacity-100 group-hover:bg-green-300"
                       onClick={(e) => {
                         e.stopPropagation();
                         handleRerun(query.text);
                       }}
                     >
-                      Rerun
+                      Repost
                     </Button>
                   </div>
                   <p className="text-xs text-muted-foreground mt-1">
