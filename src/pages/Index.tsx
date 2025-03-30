@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { Provider } from 'react-redux';
+import { store } from '@/store';
+import Header from '@/components/Dashboard/Header';
+import QueryInput from '@/components/Dashboard/QueryInput';
+import QueryHistory from '@/components/Dashboard/QueryHistory';
+import ResultsDisplay from '@/components/Dashboard/ResultsDisplay';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <Provider store={store}>
+      <div className="min-h-screen bg-background">
+        <div className="container py-8">
+          <Header />
+          
+          <div className="mb-8">
+            <QueryInput />
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="md:col-span-1">
+              <QueryHistory />
+            </div>
+            
+            <div className="md:col-span-2">
+              <ResultsDisplay />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </Provider>
   );
 };
 
